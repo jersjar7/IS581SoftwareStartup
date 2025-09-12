@@ -287,10 +287,31 @@ body {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    margin-bottom: 24px;
 }
 
 .hero__btn {
-    min-width: 180px;
+    min-width: 200px;
+}
+
+/* Coming Soon Badge */
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #FFB84D 100%);
+    border-radius: 20px;
+    box-shadow: var(--shadow-light);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.hero__badge-text {
+    color: var(--color-background);
+    font-size: var(--font-size-footnote);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .hero__visual {
@@ -600,7 +621,7 @@ body {
     bottom: -40px;
     left: -60px;
     width: 300px;
-    height:200px;
+    height: 200px;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-medium);
@@ -1237,6 +1258,15 @@ body {
     }
 }
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
@@ -1373,7 +1403,7 @@ body {
     }
 
     .hero__btn {
-        min-width: 160px;
+        min-width: 200px;
     }
 
     .hero__mockups {
