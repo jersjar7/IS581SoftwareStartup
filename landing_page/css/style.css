@@ -314,6 +314,29 @@ body {
     letter-spacing: 0.5px;
 }
 
+/*
+.hero__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 580px;           /* was 500px 
+  overflow: visible;           /* allow image to spill a bit 
+}
+
+
+.hero__image {
+  width: auto;
+  height: auto;
+  max-width: none;             /* remove the 90% cap 
+  transform-origin: center;    /* helpful for later animation 
+  /* responsive size: min/max guardrails */
+  /* grows with viewport, but capped for ultra-wide screens 
+  --target-size: clamp(520px, 48vw, 960px);
+  width: var(--target-size);
+}
+*/
+
 .hero__visual {
     position: relative;
     height: 600px;
@@ -350,7 +373,7 @@ body {
 
 .hero__mockups {
     position: absolute;
-    top: 20px;
+    top: -150px;
     right: -40px;
 }
 
@@ -362,7 +385,7 @@ body {
 }
 
 .hero__mockup--mobile {
-    width: 120px;
+    width: 180px;
     height: auto;
     top: 0;
     right: 0;

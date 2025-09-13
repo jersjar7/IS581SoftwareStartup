@@ -21,6 +21,7 @@ class UbiqaLanding {
         this.bindEvents();
         this.initAnimations();
         this.initScrollEffects();
+        this.initHeroParallax();
         console.log('🏠 Ubiqa Landing Page initialized');
     }
     
@@ -144,6 +145,40 @@ class UbiqaLanding {
             observer.observe(heroSection);
         }
     }
+
+    /*
+    initHeroParallax() {
+        const hero = document.getElementById('hero');
+        const img  = document.getElementById('hero-house');
+        if (!hero || !img) return;
+
+        const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+
+        const update = () => {
+            const rect = hero.getBoundingClientRect();
+            const vh = window.innerHeight || 1;
+
+            // progress = 0 when hero top hits top of viewport
+            // progress = 1 when hero bottom hits top of viewport (scrolled past)
+            const total = rect.height + vh;
+            const seen  = vh - rect.top;                  // how much hero is in view
+            let progress = clamp(seen / total, 0, 1);
+
+            // Map progress to transforms:
+            // subtle scale from 1.00 → 1.08 and translateY from 12px → -12px
+            const scale = 1 + progress * 0.6;
+            const ty    = 12 - progress * 24;
+
+            img.style.transform = `translateY(${ty}px) scale(${scale})`;
+        };
+
+        // Run on load/scroll/resize
+        update();
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        }
+    */
+
     
     toggleMobileMenu(e) {
         e.preventDefault();
